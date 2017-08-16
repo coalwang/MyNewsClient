@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 这里的FrameLayout必须具有layout_above, fragment的边缘没有完全填充-->
+        <android.support.v7.widget.Toolbar
+            app:navigationIcon="@mipmap/ic_launcher"
+            android:id="@+id/main_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:outlineProvider="none">
+            <ImageButton
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_tool_bar_image_button"
+                android:background="@mipmap/ic_launcher"/>
+        </android.support.v7.widget.Toolbar>
+        <FrameLayout
+            android:id="@+id/main_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></FrameLayout>
+        <com.ashokvarma.bottomnavigation.BottomNavigationBar
+            android:id="@+id/main_bottom_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></com.ashokvarma.bottomnavigation.BottomNavigationBar>
+    </LinearLayout>
+
+    <!-- 侧滑菜单NavigationView,搭配DrawerLayout使用
+         添加依赖 compile 'com.android.support:design:25.0.1'
+         headerLayout:测换栏里面的头布局
+         menu:侧滑栏里面的菜单项
+         layout_gravity:表示侧滑菜单从左边滑出，还是右边滑出
+         -->
+    <android.support.design.widget.NavigationView
+        android:layout_gravity="left"
+        android:id="@+id/main_navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/header_layout"
+        app:menu="@menu/main"
+        ></android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      tools:context=".activity.MainActivity"
+    >
+    <item android:title="点我"
+          android:icon="@mipmap/ic_launcher"
+          android:id="@+id/tool_bar_menu_one"
+          android:showAsAction="ifRoom">
+    </item>
+    <item android:title="点我"
+        android:icon="@mipmap/ic_launcher"
+        android:id="@+id/tool_bar_menu_two"
+        android:showAsAction="ifRoom">
+    </item>
+    <item android:title="点我"
+        android:icon="@mipmap/ic_launcher"
+        android:id="@+id/tool_bar_menu_three"
+        android:showAsAction="ifRoom">
+    </item>
+</menu>
